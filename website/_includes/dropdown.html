@@ -1,0 +1,13 @@
+<!-- DROP DOWN (not a DROP DOWN)-->
+<div style="flex-basis: 100%; max-width: 100%;">
+    <div class="dropdown-container collapsible">
+        <div class="form-control" tabindex="0" role="button" aria-label="APIs" data-toggle="collapsible" exaria-expanded="false" style="background-color: silver;">
+            <div class="input-group" style="text-align: center;">
+                <div class="input">
+                    {% assign path = page.url | remove:'/index.html' | split: '/' %}
+                    {{path[2]}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

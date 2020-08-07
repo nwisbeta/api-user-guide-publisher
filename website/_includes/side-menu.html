@@ -1,0 +1,55 @@
+<!-- Tabs -->
+<div style="flex-basis: 100%; max-width: 100%;">
+    <style>
+        .api-nav-tabs {
+            display: flex;
+            align-items: stretch;
+            margin-bottom: 10px
+        }
+
+        .api-nav-tab {
+            flex-grow: 1;
+            display: block;
+            padding: 8px 3px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+            border-bottom: 1px solid #ced4da;
+        }
+
+        .api-nav-tab-active {
+            border: 1px solid #ced4da;
+            border-bottom: 0
+        }
+
+        .api-nav-tab-disabled {
+            pointer-events: none;
+            cursor: default;
+            color: grey;
+        }
+    </style>
+    {% assign path = page.url | remove:'/index.html' | split: '/' %}
+    <div class="api-nav-tabs">
+        <a href="/api-details/#api={{path[2]}}" class="api-nav-tab">Definition</a>
+        <a href="" class="api-nav-tab api-nav-tab-active">User Guide</a>
+    </div>
+
+    <nav data-bind="secured: roles, styled: styles" class="menu menu-x7ygk">
+        <div class="menu menu-vertical" data-bind="template: { name: 'verticalMenu', data: $component }">
+            <ul class="nav" data-bind="foreach: { data: $data.nodes, as: 'item' }">
+                {% assign pg = site.pages | where: "api", page.api | sort: "order" %}
+                {% for item in pg %}
+                {% assign url = page.url | split: '/' %}
+                {% assign menuItem = item.url | split: '/'%}
+                {% if url[1] == menuItem[1] and url[2] == menuItem[2] %}
+                <li class="nav-item">
+                    <a href="{{item.url}}"
+                        class="nav-link {% if page.url == item.url %}nav-link-active{% endif %}">{{ menuItem | last }}</a>
+                </li>
+                {% endif %}
+                {% endfor %}
+
+            </ul>
+        </div>
+    </nav>
+
+</div>
