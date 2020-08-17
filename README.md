@@ -22,9 +22,6 @@ docker run --rm --volume="$PWD/website:/srv/jekyll" -it jekyll/jekyll jekyll bui
 
 Copy the `_site/api-guides` folder and place it alongside the reset of the files in the papebits published portal.
 
-
-docker run --rm --volume="$PWD/website:/srv/jekyll" -it jekyll/jekyll jekyll build
-
 ### Update/Add user guide content 
 
 The API user guides are markdown files in the API Catalogue (https://github.com/nwisbeta/api-catalogue/)
@@ -65,6 +62,7 @@ The layout is based on the API Details page from the developer portal (published
     - Replace `<api-list-dropdown>` and its contents with `{% include dropdown.html %}`
     - Replace `<operation-list>` and its contents with `{% include side-menu.html %}`
     - Replace everything inside `<div class="block ProseMirror">` with `{{ content }}`
+    - Remove `<api-details>` and `<operation-details>`
 
 > NOTE: If you want the pages to display properly when you preview in Jekyll dev server you'll also need to copy across these files from the published site:  
 > `/content/*`  

@@ -1,9 +1,5 @@
  .bcgkrvidmt {
-  background-size: cover;
-  background-image: url('/content/hero-gradient.jpg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: unset;
+  background-image: linear-gradient(45deg,rgba(44, 62.00000000000007, 114, 1),rgba(17.99999999999999, 117.99999999999989, 167.99999999999997, 1) 100%);
 }  .hbtwyfsyuu {
   background-color: rgba(227, 227, 227, 1);
 }  .wrsipugyhs {
@@ -13,7 +9,7 @@
   width: 100%;
   display: grid;
   margin-top: 10px;
-  min-height: 103px;
+  min-height: 111px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 10px;
@@ -22,7 +18,7 @@
 }
 @media(min-width:576px) {
   .gjpnqnxbbj-sm {
-    min-height: 103px;
+    min-height: 111px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -30,7 +26,7 @@
 @media(min-width:768px) {
   .gjpnqnxbbj-md {
     margin-top: 0px;
-    min-height: 130px;
+    min-height: 131px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 0px;
@@ -38,6 +34,7 @@
 }
 @media(min-width:992px) {
   .gjpnqnxbbj-lg {
+    min-height: 131px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -45,7 +42,7 @@
 @media(min-width:1200px) {
   .gjpnqnxbbj-xl {
     margin-top: 0px;
-    min-height: 140px;
+    min-height: 131px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 0px;
@@ -147,6 +144,16 @@
     align-content: center;
     padding-right: 15px;
     padding-bottom: 15px;
+    justify-content: flex-start;
+  }
+}
+@media(min-width:992px) {
+  .kltazpmqso-lg {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 0;
+    align-items: center;
+    align-content: center;
     justify-content: flex-start;
   }
 }
