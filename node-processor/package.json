@@ -1,7 +1,7 @@
 {
   "name": "node-processor",
   "version": "1.0.0",
-  "description": "",
+  "description": "A processing script",
   "main": "create-layout.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "domino": "^2.1.6"
+    "domino": "^2.1.6",
+    "remark": "^12.0.1",
+    "remark-html": "^12.0.0"
   }
 }
