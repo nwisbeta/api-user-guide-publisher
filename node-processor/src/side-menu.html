@@ -1,0 +1,43 @@
+<!-- Tabs -->
+<div id="api-guides-sidebar" style="flex-basis: 100%; max-width: 100%;">
+    <style>
+        .api-nav-tabs {
+            display: flex;
+            align-items: stretch;
+            margin-bottom: 10px
+        }
+
+        .api-nav-tab {
+            flex-grow: 1;
+            display: block;
+            padding: 8px 3px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+            border-bottom: 1px solid #ced4da;
+        }
+
+        .api-nav-tab-active {
+            border: 1px solid #ced4da;
+            border-bottom: 0
+        }
+
+        .api-nav-tab-disabled {
+            pointer-events: none;
+            cursor: default;
+            color: grey;
+        }
+    </style>
+
+    <div class="api-nav-tabs">
+        <a href="/api-details/#api={{path[2]}}" class="api-nav-tab">Definition</a>
+        <a href="" class="api-nav-tab api-nav-tab-active">User Guide</a>
+    </div>
+
+    <nav data-bind="secured: roles, styled: styles" class="menu menu-x7ygk">
+        <div class="menu menu-vertical">
+            <ul class="nav">
+            </ul>
+        </div>
+    </nav>
+
+</div>

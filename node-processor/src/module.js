@@ -5,7 +5,7 @@ const remark = require('remark')
 const html = require('remark-html')
 
 const templateCache = {};
-function applyTemplate(templateFile, content){
+function applyTemplate(templateFile, content, navMenu){
 
     if(!templateCache[templateFile]) {
         const html = fs.readFileSync(templateFile).toString()
@@ -16,22 +16,36 @@ function applyTemplate(templateFile, content){
         const meta = document.querySelector("meta[property=\"og:url\"]")
         meta.setAttribute("content","{{ page.url }}")
         
-        const apiDropdown = document.querySelector("api-list-dropdown")
-        apiDropdown.parentNode.replaceChild(document.createTextNode("{% include dropdown.html %}"), apiDropdown)
-        
-        const operationList = document.querySelector("operation-list")
-        operationList.parentNode.replaceChild(document.createTextNode("{% include side-menu.html %}"), operationList)
-        
         document.querySelector("api-details").remove()
         document.querySelector("operation-details").remove()
     
         templateCache[templateFile] = document;       
     }
+
     const page = templateCache[templateFile].cloneNode(true)
+
+    const operationList = page.querySelector("operation-list")
+    operationList.parentNode.replaceChild(createSideNav(page, navMenu), operationList)
 
     page.querySelector(".block.ProseMirror").innerHTML = content
 
     return page
+}
+
+function createSideNav(document, navMenu){
+    const html = fs.readFileSync(__dirname + "/side-menu.html").toString()
+    const sidebar = document.adoptNode(domino.createWindow(html).document.querySelector("#api-guides-sidebar"));
+    
+    sidebar.querySelector(".api-nav-tabs a").setAttribute("href",`/api-details/#api=${navMenu.api}`)
+
+    const template = document.createElement('template')
+    for(navItem of navMenu) {
+        template.innerHTML += `<li class="nav-item"><a class="nav-link ${"nav-link-active"}" href="${navItem.href}" >${navItem.text}</a></li>\n`         
+    }
+    sidebar.querySelector("ul.nav").appendChild(template.content)
+
+    return sidebar
+
 }
 
 
