@@ -1,145 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en"><head><link rel="shortcut icon" href="/content/favicon-32x32.png"><meta charset="utf-8"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"><link href="/styles/theme.css" rel="stylesheet" type="text/css"><script src="/scripts/theme.js"></script><title>APIs: Details - NHS Wales Developer Portal</title><meta name="description" content="Discover APIs, learn how to use them, try them out interactively, and sign up to acquire keys."><meta name="keywords" content="API Management, API, developer"><meta name="author" content="NHS Wales"><link href="/styles/styles.css" rel="stylesheet" type="text/css"><link href="/api-details/styles.css" rel="stylesheet" type="text/css"><meta property="og:type" content="article"><meta property="og:site_name" content="NHS Wales Developer Portal"><meta property="og:title" content="APIs: Details"><meta property="og:description" content="Discover APIs, learn how to use them, try them out interactively, and sign up to acquire keys."><meta property="og:url" content="/api-details"><script>/* Hotjar Tracking Code */
+                (function(h,o,t,j,a,r){
+                    h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                    h._hjSettings={hjid:1878256,hjsv:6};
+                    a=o.getElementsByTagName('head')[0];
+                    r=o.createElement('script');r.async=1;
+                    r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                    a.appendChild(r);
+                })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 
-<head>
-    <link rel="shortcut icon" href="/content/favicon-32x32.png">
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <link href="/styles/theme.css" rel="stylesheet" type="text/css">
-    <script src="/scripts/theme.js"></script>
-    <title>APIs: Details - NHS Wales Developer Portal</title>
-    <meta name="description"
-        content="Discover APIs, learn how to use them, try them out interactively, and sign up to acquire keys.">
-    <meta name="keywords" content="API Management, API, developer">
-    <meta name="author" content="NHS Wales">
-    <link href="/styles/styles.css" rel="stylesheet" type="text/css">
-    <link href="/api-details/styles.css" rel="stylesheet" type="text/css">
-    <meta property="og:type" content="article">
-    <meta property="og:site_name" content="NHS Wales Developer Portal">
-    <meta property="og:title" content="APIs: Details">
-    <meta property="og:description"
-        content="Discover APIs, learn how to use them, try them out interactively, and sign up to acquire keys.">
-    <meta property="og:url" content="/api-details">
-    <script>/* Hotjar Tracking Code */
-        (function (h, o, t, j, a, r) {
-            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
-            h._hjSettings = { hjid: 1878256, hjsv: 6 };
-            a = o.getElementsByTagName('head')[0];
-            r = o.createElement('script'); r.async = 1;
-            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-            a.appendChild(r);
-        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
-
-        /* Application Insights*/
-        var sdkInstance = "appInsightsSDK"; window[sdkInstance] = "appInsights"; var aiName = window[sdkInstance], aisdk = window[aiName] || function (e) { function n(e) { t[e] = function () { var n = arguments; t.queue.push(function () { t[e].apply(t, n) }) } } var t = { config: e }; t.initialize = !0; var i = document, a = window; setTimeout(function () { var n = i.createElement("script"); n.src = e.url || "https://az416426.vo.msecnd.net/scripts/b/ai.2.min.js", i.getElementsByTagName("script")[0].parentNode.appendChild(n) }); try { t.cookie = i.cookie } catch (e) { } t.queue = [], t.version = 2; for (var r = ["Event", "PageView", "Exception", "Trace", "DependencyData", "Metric", "PageViewPerformance"]; r.length;)n("track" + r.pop()); n("startTrackPage"), n("stopTrackPage"); var s = "Track" + r[0]; if (n("start" + s), n("stop" + s), n("setAuthenticatedUserContext"), n("clearAuthenticatedUserContext"), n("flush"), !(!0 === e.disableExceptionTracking || e.extensionConfig && e.extensionConfig.ApplicationInsightsAnalytics && !0 === e.extensionConfig.ApplicationInsightsAnalytics.disableExceptionTracking)) { n("_" + (r = "onerror")); var o = a[r]; a[r] = function (e, n, i, a, s) { var c = o && o(e, n, i, a, s); return !0 !== c && t["_" + r]({ message: e, url: n, lineNumber: i, columnNumber: a, error: s }), c }, e.autoExceptionInstrumented = !0 } return t }(
-            {
-                instrumentationKey: "de57a051-ba9f-41bc-b61d-49d0ae43cc47"
-            }
-        ); window[aiName] = aisdk, aisdk.queue && 0 === aisdk.queue.length && aisdk.trackPageView({});</script>
-</head>
-
-<body>
-    <main>
-        <section class="bcgkrvidmt bcgkrvidmt-sm bcgkrvidmt-md bcgkrvidmt-lg bcgkrvidmt-xl">
-            <div class="gjpnqnxbbj gjpnqnxbbj-sm gjpnqnxbbj-md gjpnqnxbbj-lg gjpnqnxbbj-xl">
-                <div class="kltazpmqso kltazpmqso-sm kltazpmqso-md kltazpmqso-lg kltazpmqso-xl">
-                    <div class="inline-block"><a href="/"><img class="content picture picture-tft98"
-                                src="/content/NHSWalesdevportal-white-01.png" alt="GIG Cymru | NHS Wales" width="350"
-                                style="width:350px"></a></div>
-                    <div class="collapsible collapsible-panel">
-                        <div class="backdrop"></div>
-                        <div
-                            class="collapsible-content grypqzuyih-md grypqzuyih-lg grypqzuyih-xl grypqzuyih grypqzuyih-sm">
-                            <nav class="menu menu-yhdk9" data-role="authenticated">
-                                <div class="menu menu-horizontal">
-                                    <ul class="nav">
-                                        <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
-                                        <li class="nav-item"><a href="https://github.com/nwisbeta"
-                                                class="nav-link">GitHub</a></li>
-                                        <li class="nav-item"><a href="/apis" class="nav-link">APIs</a></li>
-                                        <li class="nav-item"><a href="/sandbox" class="nav-link">Sandbox</a></li>
-                                        <li class="nav-item"><a href="/standards" class="nav-link">Standards</a></li>
-                                        <li class="nav-item"><a href="/reports" class="nav-link">Reports</a></li>
-                                        <li class="nav-item"><a href="/profile" class="nav-link">User Profile</a></li>
-                                        <li class="nav-item"><a href="#signout" class="nav-link">Sign out</a></li>
-                                    </ul>
-                                </div>
-                            </nav>
-                            <nav class="hidden menu menu-yhdk9" data-role="anonymous">
-                                <div class="menu menu-horizontal">
-                                    <ul class="nav">
-                                        <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
-                                        <li class="nav-item"><a href="https://github.com/nwisbeta"
-                                                class="nav-link">GitHub</a></li>
-                                        <li class="nav-item"><a href="/signin" class="nav-link">Sign in</a></li>
-                                        <li class="nav-item"><a href="/signup" class="nav-link">Sign up</a></li>
-                                        <li class="nav-item"><a href="/cy/cartref" class="nav-link">Cymraeg</a></li>
-                                    </ul>
-                                </div>
-                            </nav><button class="collapsible-panel-close" aria-label="Toggle" data-toggle="modal"><i
-                                    class="icon icon-simple-remove"></i></button>
-                        </div><button class="collapsible-panel-open" aria-label="Toggle" data-toggle="modal"><i
-                                class="icon icon-menu-8"></i></button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <main>
-            <section>
-                <div class="huzbxuibav huzbxuibav-md huzbxuibav-sm huzbxuibav-lg huzbxuibav-xl">
-                    <div class="ijdrsuhpjk ijdrsuhpjk-md ijdrsuhpjk-xl">
-                        <api-list-dropdown
-                            params="{&quot;allowSelection&quot;:true,&quot;defaultGroupByTagToEnabled&quot;:false}">
-                        </api-list-dropdown>
-                        <operation-list class="d-block"
-                            params="{&quot;allowSelection&quot;:true,&quot;defaultGroupByTagToEnabled&quot;:false}">
-                        </operation-list>
-                    </div>
-                    <div class="ycqdvmhchp ycqdvmhchp-md ycqdvmhchp-xl">
-                        <api-details params="{&quot;changeLogPageUrl&quot;:&quot;/api-changelog&quot;}"></api-details>
-                        <div class="block ProseMirror">
-                            <p><b>Before making calls to an API, you'll need a subscription to the <a
-                                        href="/products">Sandbox product</a>.</b></p>
-                            <p><b>NOTE: Some APIs do not yet expose any functionality in the sandbox</b></p>
-                            <p></p>
-                        </div>
-                        <operation-details
-                            params="{&quot;enableConsole&quot;:true,&quot;authorizationServers&quot;:[{&quot;name&quot;:&quot;auth0-oauth&quot;,&quot;displayName&quot;:&quot;auth0-mpi&quot;,&quot;description&quot;:null,&quot;clientId&quot;:&quot;not provided when created through GIT&quot;,&quot;authorizationEndpoint&quot;:&quot;https://dev-k10n4a74.eu.auth0.com/authorize?scope=openid%2Cpatient%2F*.read&amp;audience=https%3A%2F%2Fdhew-nwis.azure-api.net%2Fmpi-on-fhir&quot;,&quot;tokenEndpoint&quot;:&quot;https://dev-k10n4a74.eu.auth0.com/oauth/token&quot;,&quot;scopes&quot;:[],&quot;grantTypes&quot;:[&quot;authorizationCode&quot;]},{&quot;authorizationEndpoint&quot;:&quot;https://dev-k10n4a74.eu.auth0.com/authorize&quot;,&quot;tokenEndpoint&quot;:&quot;https://dev-k10n4a74.eu.auth0.com/oauth/token&quot;,&quot;scopes&quot;:[&quot;openid&quot;,&quot;profile&quot;,&quot;offline_access&quot;,&quot;name&quot;,&quot;given_name&quot;,&quot;family_name&quot;,&quot;nickname&quot;,&quot;email&quot;,&quot;email_verified&quot;,&quot;picture&quot;,&quot;created_at&quot;,&quot;identities&quot;,&quot;phone&quot;,&quot;address&quot;],&quot;grantTypes&quot;:[&quot;implicit&quot;],&quot;name&quot;:&quot;auth0&quot;,&quot;clientId&quot;:&quot;not provided when created through GIT&quot;,&quot;displayName&quot;:&quot;Auth0&quot;,&quot;description&quot;:null}],&quot;defaultSchemaView&quot;:&quot;table&quot;}">
-                        </operation-details>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <section class="hbtwyfsyuu-xl hbtwyfsyuu">
-            <div class="kqbszyvhxt kqbszyvhxt-md kqbszyvhxt-sm kqbszyvhxt-lg kqbszyvhxt-xl">
-                <div class="jpdcekxpxa jpdcekxpxa-md jpdcekxpxa-xl">
-                    <div class="inline-block"><img class="content picture picture-fpcs4"
-                            src="/content/NHSWales-blue-logo.png" alt="GIG Cymru | NHS Wales" width="150" height="100"
-                            style="width:150px;height:100px"></div>
-                </div>
-                <div class="dqvoclalmp dqvoclalmp-md dqvoclalmp-xl">
-                    <div class="block ProseMirror">
-                        <p class="text text-xl-align-right text text-md-align-right text text-align-center text-6xtuw">
-                            <a href="/accessibility">Accessibility </a>- <a href="/terms-of-use">Terms of use</a> - <a
-                                href="/privacy-policy">Privacy Policy</a></p>
-                        <p class="text text-xl-align-right text text-md-align-right text text-align-center text-6xtuw">
-                            <a href="https://digitalhealth.wales/dhew">Digital Health Ecosystem Wales</a></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="wrsipugyhs wrsipugyhs-xl">
-            <div class="ykiyguxiww ykiyguxiww-xl">
-                <div class="ncwkpamvyl ncwkpamvyl-xl">
-                    <div class="block ProseMirror">
-                        <blockquote class="text text-xl-align-center text text-md-align-center text text-align-center">©
-                            NHS Wales 2020</blockquote>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-</body>
-
-</html>
+                /* Application Insights*/
+                var sdkInstance="appInsightsSDK";window[sdkInstance]="appInsights";var aiName=window[sdkInstance],aisdk=window[aiName]||function(e){function n(e){t[e]=function(){var n=arguments;t.queue.push(function(){t[e].apply(t,n)})}}var t={config:e};t.initialize=!0;var i=document,a=window;setTimeout(function(){var n=i.createElement("script");n.src=e.url||"https://az416426.vo.msecnd.net/scripts/b/ai.2.min.js",i.getElementsByTagName("script")[0].parentNode.appendChild(n)});try{t.cookie=i.cookie}catch(e){}t.queue=[],t.version=2;for(var r=["Event","PageView","Exception","Trace","DependencyData","Metric","PageViewPerformance"];r.length;)n("track"+r.pop());n("startTrackPage"),n("stopTrackPage");var s="Track"+r[0];if(n("start"+s),n("stop"+s),n("setAuthenticatedUserContext"),n("clearAuthenticatedUserContext"),n("flush"),!(!0===e.disableExceptionTracking||e.extensionConfig&&e.extensionConfig.ApplicationInsightsAnalytics&&!0===e.extensionConfig.ApplicationInsightsAnalytics.disableExceptionTracking)){n("_"+(r="onerror"));var o=a[r];a[r]=function(e,n,i,a,s){var c=o&&o(e,n,i,a,s);return!0!==c&&t["_"+r]({message:e,url:n,lineNumber:i,columnNumber:a,error:s}),c},e.autoExceptionInstrumented=!0}return t}(
+                {
+                    instrumentationKey:"de57a051-ba9f-41bc-b61d-49d0ae43cc47"
+                }
+                );window[aiName]=aisdk,aisdk.queue&&0===aisdk.queue.length&&aisdk.trackPageView({});</script></head><body><main><section class="bcgkrvidmt bcgkrvidmt-sm bcgkrvidmt-md bcgkrvidmt-lg bcgkrvidmt-xl"><div class="gjpnqnxbbj gjpnqnxbbj-sm gjpnqnxbbj-md gjpnqnxbbj-lg gjpnqnxbbj-xl"><div class="kltazpmqso kltazpmqso-sm kltazpmqso-md kltazpmqso-lg kltazpmqso-xl"><div class="inline-block"><a href="/"><img class="content picture picture-tft98" src="/content/NHSWalesdevportal-white-01.png" alt="GIG Cymru | NHS Wales" width="350" style="width:350px"></a></div><div class="collapsible collapsible-panel"><div class="backdrop"></div><div class="collapsible-content grypqzuyih-md grypqzuyih-lg grypqzuyih-xl grypqzuyih grypqzuyih-sm"><nav class="menu menu-yhdk9" data-role="authenticated"><div class="menu menu-horizontal"><ul class="nav"><li class="nav-item"><a href="/" class="nav-link">Home</a></li><li class="nav-item"><a href="https://github.com/nwisbeta" class="nav-link">GitHub</a></li><li class="nav-item"><a href="/apis" class="nav-link">APIs</a></li><li class="nav-item"><a href="/sandbox" class="nav-link">Sandbox</a></li><li class="nav-item"><a href="/standards" class="nav-link">Standards</a></li><li class="nav-item"><a href="/reports" class="nav-link">Reports</a></li><li class="nav-item"><a href="/profile" class="nav-link">User Profile</a></li><li class="nav-item"><a href="#signout" class="nav-link">Sign out</a></li></ul></div></nav><nav class="hidden menu menu-yhdk9" data-role="anonymous"><div class="menu menu-horizontal"><ul class="nav"><li class="nav-item"><a href="/" class="nav-link">Home</a></li><li class="nav-item"><a href="https://github.com/nwisbeta" class="nav-link">GitHub</a></li><li class="nav-item"><a href="/signin" class="nav-link">Sign in</a></li><li class="nav-item"><a href="/signup" class="nav-link">Sign up</a></li><li class="nav-item"><a href="/cy/cartref" class="nav-link">Cymraeg</a></li></ul></div></nav><button class="collapsible-panel-close" aria-label="Toggle" data-toggle="modal"><i class="icon icon-simple-remove"></i></button></div><button class="collapsible-panel-open" aria-label="Toggle" data-toggle="modal"><i class="icon icon-menu-8"></i></button></div></div></div></section><main><section><div class="huzbxuibav huzbxuibav-md huzbxuibav-sm huzbxuibav-lg huzbxuibav-xl"><div class="ijdrsuhpjk ijdrsuhpjk-md ijdrsuhpjk-xl"><api-list-dropdown params="{&quot;allowSelection&quot;:true,&quot;defaultGroupByTagToEnabled&quot;:false,&quot;detailsPageUrl&quot;:&quot;/api-details&quot;}"></api-list-dropdown><operation-list class="d-block" params="{&quot;allowSelection&quot;:true,&quot;defaultGroupByTagToEnabled&quot;:false}"></operation-list></div><div class="ycqdvmhchp ycqdvmhchp-md ycqdvmhchp-xl"><api-details params="{&quot;changeLogPageUrl&quot;:&quot;/api-changelog&quot;}"></api-details><div class="block ProseMirror"><p><b>Before making calls to an API, you'll need a subscription to the <a href="/products">Sandbox product</a>.</b></p><p><b>NOTE: Some APIs do not yet expose any functionality in the sandbox</b></p><p></p></div><operation-details params="{&quot;enableConsole&quot;:true,&quot;authorizationServers&quot;:[{&quot;name&quot;:&quot;auth0-oauth&quot;,&quot;displayName&quot;:&quot;auth0-mpi&quot;,&quot;description&quot;:null,&quot;clientId&quot;:&quot;0TswrsCXIkMyQIaKGRp0pIcuuXuSDgnH&quot;,&quot;authorizationEndpoint&quot;:&quot;https://dev-k10n4a74.eu.auth0.com/authorize?scope=openid%2Cpatient%2F*.read&amp;audience=https%3A%2F%2Fdhew-nwis.azure-api.net%2Fmpi-on-fhir&quot;,&quot;tokenEndpoint&quot;:&quot;https://dev-k10n4a74.eu.auth0.com/oauth/token&quot;,&quot;scopes&quot;:[],&quot;grantTypes&quot;:[&quot;authorizationCode&quot;]},{&quot;authorizationEndpoint&quot;:&quot;https://dev-k10n4a74.eu.auth0.com/authorize&quot;,&quot;tokenEndpoint&quot;:&quot;https://dev-k10n4a74.eu.auth0.com/oauth/token&quot;,&quot;scopes&quot;:[&quot;openid&quot;,&quot;profile&quot;,&quot;offline_access&quot;,&quot;name&quot;,&quot;given_name&quot;,&quot;family_name&quot;,&quot;nickname&quot;,&quot;email&quot;,&quot;email_verified&quot;,&quot;picture&quot;,&quot;created_at&quot;,&quot;identities&quot;,&quot;phone&quot;,&quot;address&quot;],&quot;grantTypes&quot;:[&quot;implicit&quot;],&quot;name&quot;:&quot;auth0&quot;,&quot;clientId&quot;:&quot;0TswrsCXIkMyQIaKGRp0pIcuuXuSDgnH&quot;,&quot;displayName&quot;:&quot;Auth0&quot;,&quot;description&quot;:null}],&quot;defaultSchemaView&quot;:&quot;table&quot;}"></operation-details></div></div></section></main><section class="hbtwyfsyuu-xl hbtwyfsyuu"><div class="kqbszyvhxt kqbszyvhxt-md kqbszyvhxt-sm kqbszyvhxt-lg kqbszyvhxt-xl"><div class="jpdcekxpxa jpdcekxpxa-md jpdcekxpxa-xl"><div class="inline-block"><img class="content picture picture-fpcs4" src="/content/NHSWales-blue-logo.png" alt="GIG Cymru | NHS Wales" width="150" height="100" style="width:150px;height:100px"></div></div><div class="dqvoclalmp dqvoclalmp-md dqvoclalmp-xl"><div class="block ProseMirror"><p class="text text-xl-align-right text text-md-align-right text text-align-center text-6xtuw"><a href="/accessibility">Accessibility </a>- <a href="/terms-of-use">Terms of use</a> - <a href="/privacy-policy">Privacy Policy</a></p><p class="text text-xl-align-right text text-md-align-right text text-align-center text-6xtuw"><a href="https://digitalhealth.wales/dhew">Digital Health Ecosystem Wales</a></p></div></div></div></section><section class="wrsipugyhs wrsipugyhs-xl"><div class="ykiyguxiww ykiyguxiww-xl"><div class="ncwkpamvyl ncwkpamvyl-xl"><div class="block ProseMirror"><blockquote class="text text-xl-align-center text text-md-align-center text text-align-center">© NHS Wales 2020</blockquote></div></div></div></section></main></body></html>
