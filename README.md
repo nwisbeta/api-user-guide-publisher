@@ -51,7 +51,7 @@ The layout is based on the API Details page from the developer portal (published
   - run `npm run publish`  
     The published site will be published to the `dist/website` folder
 
-- Copy `dist/website/api-guides/index.html` into this repository as `_layouts/default.html` but make the following changes:
+- Copy `dist/website/api-details/index.html` into this repository as `_layouts/default.html` but make the following changes:
     - Update the title and `og:url` meta element in the head as show below:
         ```html
         <title>APIs: User Guide - NHS Wales Developer Portal</title>
