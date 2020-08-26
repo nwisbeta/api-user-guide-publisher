@@ -36,7 +36,10 @@ async function processUserGuides(){
         }
         console.log("...done!")
 
+        const apis = [];
         for(const api in userGuides){
+
+            apis.push(api);
 
             for(const userGuide of userGuides[api]){
 
@@ -48,6 +51,8 @@ async function processUserGuides(){
     
             }
         }
+
+        updateConfig(apis);
     }
     catch(err){
         console.log(err)
@@ -72,3 +77,11 @@ function extractUserGuideDoc(filePath) {
     }
 }
 
+function updateConfig(apis){
+    let file = fs.readFileSync("./data/config.json")
+    let config = JSON.parse(file);
+
+    config["apisWithGuides"] = apis;
+
+    fs.writeFileSync("./data/config.json", JSON.stringify(config, null, 2));
+}
