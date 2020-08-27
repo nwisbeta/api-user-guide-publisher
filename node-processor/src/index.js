@@ -3,24 +3,30 @@ const path = require('path')
 const { forEachFile } = require('./utilities/fs')
 const { getHtmlFromMarkdown } = require('./utilities/markdown')
 const { applyTemplate } = require('./template')
+const { argv } = require('process')
 
-processUserGuides()
+if(argv.length < 4){
+    console.log("Usage index.js userGuidesPath targetSite")
+    return;
+}   
 
-async function processUserGuides(){
+processUserGuides(argv[2], argv[3])
+
+async function processUserGuides(userGuidesPath, targetSite){
     try {
 
         const userGuides = {}
         let started = false;
         let inProgress = 0;
         forEachFile(
-            "./data/user-guides/", 
+            userGuidesPath, 
             ".md", 
             function (filePath) {
                 
                 inProgress++ 
                 started = true
     
-                const ugItem = extractUserGuideDoc(filePath)
+                const ugItem = extractUserGuideDoc(filePath, userGuidesPath, targetSite)
     
                 userGuides[ugItem.api] = userGuides[ugItem.api] || []
                 userGuides[ugItem.api].push(ugItem)
@@ -42,8 +48,7 @@ async function processUserGuides(){
             apis.push(api);
 
             for(const userGuide of userGuides[api]){
-
-                const document = applyTemplate("./data/api-details/index.html", userGuide, userGuides[api])
+                const document = applyTemplate(path.join(targetSite, "api-details/index.html"), userGuide, userGuides[api])
       
                 console.log(`writing... ${userGuide.outFile}`)
                 fs.mkdirSync(path.dirname(userGuide.outFile), { recursive: true})        
@@ -52,7 +57,7 @@ async function processUserGuides(){
             }
         }
 
-        updateConfig(apis);
+        updateConfig(apis, targetSite);
     }
     catch(err){
         console.log(err)
@@ -60,13 +65,11 @@ async function processUserGuides(){
 
 }
 
-
-
-function extractUserGuideDoc(filePath) {
-    const href = filePath.replace(/.*user-guides/, '/api-guides').replace(".md", "/").replace(/\\/g, "/")
+function extractUserGuideDoc(filePath, userGuidesPath, targetSite) {
+    const href = path.join("/api-guides", path.relative(userGuidesPath, filePath).replace(".md", "/")).replace(/\\/g, "/")
     const api = href.split("/")[2]
     const html = getHtmlFromMarkdown(fs.readFileSync(filePath).toString())
-    const outFile = filePath.replace("user-guides","api-guides").replace(".md", path.sep + "index.html")
+    const outFile = path.join(targetSite, href, "index.html")
 
     return { 
         api, 
@@ -77,11 +80,13 @@ function extractUserGuideDoc(filePath) {
     }
 }
 
-function updateConfig(apis){
-    let file = fs.readFileSync("./data/config.json")
-    let config = JSON.parse(file);
+function updateConfig(apis, targetSite){
+    const configFile = path.join(targetSite, "config.json");
+
+    file = fs.readFileSync(configFile)
+    config = JSON.parse(file);
 
     config["apisWithGuides"] = apis;
 
-    fs.writeFileSync("./data/config.json", JSON.stringify(config, null, 2));
+    fs.writeFileSync(configFile, JSON.stringify(config, null, 2));
 }
