@@ -28,9 +28,9 @@
 set -e
 
 # Please set your local paths here as explained above
-GITHUB_WORKSPACE=/mnt/c/development/Git/bmcd77/api-catalogue
-DEV_PORTAL_PATH=/mnt/c/Development/Git/api-management-developer-portal
-PUBLISHER_PATH=/mnt/c/Development/Git/api-user-guide-publisher/node-processor
+GITHUB_WORKSPACE=
+DEV_PORTAL_PATH=
+PUBLISHER_PATH=
 
 if [[ ! -d $GITHUB_WORKSPACE || ! -d $DEV_PORTAL_PATH || ! -d $PUBLISHER_PATH ]]
 then
