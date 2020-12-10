@@ -24,6 +24,16 @@
 #   * DEV_PORTAL_PATH   : Location of your clone.fork of https://github.com/nwisbeta/api-management-developer-portal  (.../api-management-developer-portal)
 #   * PUBLISHER_PATH    : Location of your clone/fork of https://github.com/nwisbeta/api-user-guide-publisher         (.../api-user-guide-publisher)
 
+# **** Important : Do you first need to republish the developer portal before running this script?? ****
+# This script is using your existing dev portal local dist/website folder to add the user-guide files to.
+# Should you need to make a CSS or SCSS file change to the developer portal to support your user-guides changes, 
+# YOU WILL NEED TO REPUBLISH THE DEV PORTAL WHICH THIS SCRIPT DOES NOT DO. This does not apply to 
+# user-guide markdown changes only which this script targets. To republish the dev portal go to your 
+# api-management-developer-portal repo and update your APIM key if required by running 2 commands :  
+#       'scripts.v2/configure.js dhew-apim-dev "<long apim secret from azure portal goes here>"' followed by 
+#       npm run publish (which will rebuild dist/website). 
+# After that run this script again which will move the user-guide specific files into the dist/websdite!!
+
 # Abort script on non zero return codes
 set -e
 
@@ -34,7 +44,7 @@ PUBLISHER_PATH=
 
 if [[ ! -d $GITHUB_WORKSPACE || ! -d $DEV_PORTAL_PATH || ! -d $PUBLISHER_PATH ]]
 then
-  echo "you are missing one of the 3 required directories (GITHUB_WORKSPACE / DEV_PORTAL_PATH / PUBLISHER_PATH. Please check your settings."
+  echo "you are missing one or more of the 3 required directories (GITHUB_WORKSPACE / DEV_PORTAL_PATH / PUBLISHER_PATH. Please check your settings."
   exit 1
 fi
 
