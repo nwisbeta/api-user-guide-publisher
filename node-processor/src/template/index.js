@@ -44,7 +44,7 @@ function applyTemplate(templateFile, userGuideDoc, userGuide){
     const operationList = page.querySelector("operation-list")
     operationList.parentNode.replaceChild(createSideNav(page, userGuideDoc, userGuide), operationList)
 
-    const proseBlock = page.querySelector(".block.ProseMirror")
+    const proseBlock = page.querySelector(".block > .ProseMirror")
     proseBlock.innerHTML = userGuideDoc.content
     proseBlock.classList.add("userguide-content")
 
